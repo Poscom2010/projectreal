@@ -4,6 +4,9 @@
 # print(Full_name)
 # print("Age", age)
 # print("Is_new:", Is_new)
+import os
+
+from pyexpat.errors import messages
 
 #Ask tow questions persons name and color and the print "Charmu likes Black"
 
@@ -116,23 +119,134 @@
 
 #Build a car game with commands that is just the engine though wthou a Graphic User Interface GUI.
 
-command = ""
-while  True:
-    command = input(">").lower() # the .lower puts whatever the use writes into lower case
-    if command == "start":
-        print("The car has started")
-    elif command == "stop":
-        print("The car has stopped")
-    elif command == "help":
-        print("""
-start - to start the car
-stop - to stop the car
-quit - to quit the program
-        """)
-    elif command == "quit":
-        break
-    else:
-     print("I do not understand your command")
+# command = ""
+# car_started = False
+#
+# while  True:
+#     command = input(">").lower() # the .lower puts whatever the use writes into lower case
+#     if command == "start":
+#         if car_started:
+#             print("Car was started already")
+#         else:
+#             car_started = True
+#             print("The car started")
+
+#     elif command == "stop":
+#         if not car_started:
+#             print("Car was stopped already")
+#         else:
+#             car_started = False
+#             print("The car has stopped")
+#
+#     elif command == "help":
+#         print("""
+# start - to start the car
+# stop - to stop the car
+# quit - to quit the program
+#         """)
+#     elif command == "quit":
+#         break
+#     else:
+#      print("I do not understand your command")
+
+#Use For Lops to iterate over numbers or names
+# for n in range(1,11, 3):
+#     print(n)
+# for x in ["Charmu", "Jabu", "Trevor"]:
+#     print(x)
+# for item in  range(15):
+#     item +=1
+#     print(item)
+
+#Calculate the total prices using for Loops for
+#prices(10, 20, 30)
+
+# prices = (10, 20, 30)
+# total = 0
+# for price in prices:
+#     total += price
+# print(f"Total,{total}")
+#Write a program to find the largest number in a list
+# numbers = (100, 250,70,50,895,1258)
+# largest = max(numbers)
+# print(largest)
+
+# numbers = [100, 250,70,50,895,1258]
+# largest = numbers[0]
+# for num in numbers:
+#     if num > largest:
+#         largest = num
+# print(largest)
+
+#Remove duplicates in a list - write a program
+# numbers = (10,5,11,10,12,87.87,11)
+# unique = set(numbers)
+# unique_list=list(unique)
+# print(unique)
+#Using for loop:
+# numbers = [10,5,11,10,12,87,87,11]
+# unique = []
+# for number in numbers:
+#     if number not in unique:
+#         unique.append(number)
+# print(unique)
+
+# Write a program that converts mesasge to emojis
+# message = input(">")
+# words = message.split(" ")
+# emojis = {
+#     ":)": "😃",
+#     ":(": "😪😪",
+#     ":((": "😴"
+# }
+# output = " "
+# for word in words:
+#     output += emojis.get(word, word) + " "
+# print(output)
+
+# Create a function that calculates a square of a number/ returns a value or result of a function
+
+# def square(number):
+#     return number * number
+# result = square(5)
+# result_15 = square(15)
+# print(result)
+# print(result_15)
+
+#Creating a reusable function from emoji converter
+
+def emoji_converter(message):
+    words = message.split(" ")
+    emojis = {
+        ":)": "😃",
+        ":(": "😪😪",
+        ":((": "😴"
+    }
+    output = " "
+    for word in words:
+        output += emojis.get(word, word) + " "
+    return output
+
+
+message = input(">").lower()
+print(emoji_converter(message))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
