@@ -215,21 +215,80 @@ from pyexpat.errors import messages
 
 #Creating a reusable function from emoji converter
 
-def emoji_converter(message):
-    words = message.split(" ")
-    emojis = {
-        ":)": "😃",
-        ":(": "😪😪",
-        ":((": "😴"
-    }
-    output = " "
-    for word in words:
-        output += emojis.get(word, word) + " "
-    return output
+# def emoji_converter(message):
+#     words = message.split(" ")
+#     emojis = {
+#         ":)": "😃",
+#         ":(": "😪😪",
+#         ":((": "😴"
+#     }
+#     output = " "
+#     for word in words:
+#         output += emojis.get(word, word) + " "
+#     return output
+
+#
+# message = input(">").lower()
+# print(emoji_converter(message))
+
+#Create an Employee class using OOP features with fist, last,age abd email methods.
+
+# class Employee:
+#     def __init__(self, first, last, age):
+#         self.first = first
+#         self.last = last
+#         self.age = age
+#         self.email = first + '.' + last + '@' + 'gmail.com'
+#     def fullname(self):
+#         return f"{self.first} {self.last}"
+#
+#
+# employee1 = Employee('John', 'Smith', 25)
+# employee2 = Employee('Trevor', 'Noah', 45)
+#
+# print(employee1.fullname(),employee1.age)
+# print(employee1.email)
+
+#recreat a program to find max number form a list and package it as a module and
+# save it under highest and the import it in another python doument and access the functions
+
+# numbers = [100, 74 ,859,3,1000]
+# max_num = numbers[0]
+# for num in numbers:
+#     if num > max_num:
+#         max_num = num
+# print(max_num)
+
+# Create a dice program which randomly spits out two integers at each roll. The program should have a class called dice
+# and have a method called roll.When the method is call it should print two random numbers everytime.
+
+# import  random
+#
+# class  Dice:
+#     def roll(self):
+#         first = random.randint(1, 50)
+#         second = random.randint(1, 50)
+#         return first, second
+#
+# dice = Dice()
+#
+# print(dice.roll())
+
+import random
+class Leader:
+    def pick_leader(self):
+        names =["Jonh", "Teddy", "Celumusa","Charmu", "Clever", "Wandai"]
+        chosen_name = random.choice(names)
+        return f"The leader is:{chosen_name}"
+
+leader=Leader()
+print(leader.pick_leader())
 
 
-message = input(">").lower()
-print(emoji_converter(message))
+
+
+
+
 
 
 
